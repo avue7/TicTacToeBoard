@@ -19,7 +19,6 @@ TEST(TicTacToeBoardTest, sanityCheck)
 {
 	ASSERT_TRUE(true);
 }
-<<<<<<< HEAD
 */
 
 TEST(TicTacToeBoardTest, sanityCheck)
@@ -40,6 +39,3 @@ TEST(TicTacToeBoardTest, toggleXsTurn){
 }
 
 
-=======
-*/
->>>>>>> d741d033c8b4b90c02b3fc3b844910e95165374b
