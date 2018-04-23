@@ -27,6 +27,9 @@ Piece TicTacToeBoard::toggleTurn()
     turn = X;
     return turn;
   }
+  else{  // default
+    return X;
+  }
 }
 
 /**
@@ -40,7 +43,29 @@ Piece TicTacToeBoard::toggleTurn()
 **/ 
 Piece TicTacToeBoard::placePiece(int row, int column)
 {
-  return Invalid;
+  // If no winner yet...
+  if (getWinner() == Invalid){
+    // Out of bound high
+    if (row >= BOARDSIZE || column >= BOARDSIZE){
+      return Invalid;
+    }
+    // Out of bound low
+    else if (row < 0 || column < 0){
+      return Invalid;
+    }
+    // return what is already at that location
+    else if (board[row][column] != Blank){
+      return board[row][column];
+    }
+    else{
+      // place piece on the board
+      Piece curTurn;
+      curTurn = turn;
+      board[row][column] = curTurn;
+      toggleTurn();
+      return curTurn;
+    }
+  }
 }
 
 /**
@@ -49,7 +74,19 @@ Piece TicTacToeBoard::placePiece(int row, int column)
 **/
 Piece TicTacToeBoard::getPiece(int row, int column)
 {
-  return Invalid;
+  // Out of bound high and low
+  if (row >= BOARDSIZE || column >= BOARDSIZE || row < 0 || column < 0){
+    return Invalid;
+  }
+  // Coordinates does not contain X or O
+  //else if (board[row][column] != X && board[row][column] != O){
+  else if (board[row][column] == Blank){
+    return Blank;
+  }
+  // Found something there
+  else{
+    return board[row][column];
+  }
 }
 
 /**
@@ -58,5 +95,6 @@ Piece TicTacToeBoard::getPiece(int row, int column)
 **/
 Piece TicTacToeBoard::getWinner()
 {
+  // for (int i = 0; i < )
   return Invalid;
 }
