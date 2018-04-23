@@ -95,6 +95,54 @@ Piece TicTacToeBoard::getPiece(int row, int column)
 **/
 Piece TicTacToeBoard::getWinner()
 {
-  // for (int i = 0; i < )
-  return Invalid;
+  // Flag for if won
+  bool won = false;
+  
+	// Won in one of the rows?
+	for(int i = 0; i < BOARDSIZE; i++){
+		if(board[i][0] == board[i][1] && board[i][1] == board[i][2]){
+			if(board[i][0] != Blank){
+			  won = true;
+				return getPiece(i,0);
+			}
+		}
+	}
+	
+	// Cols
+	for(int i = 0; i < BOARDSIZE; i++){
+		if(board[0][i] == board[1][i] && board[1][i] == board[2][i]){
+			if(board[0][i] != Blank){
+			  won = true;
+				return board[0][i];
+			}
+		}
+	}
+	
+	// Diagonal left top bottom right
+	if(board[0][0] == board[1][1] && board[1][1] == board[2][2]){
+		if(board[0][0] != Blank){
+		  won = true;
+			return board[0][0];
+		}
+	}
+	
+	// Diagonal top right to bottom left
+	if(board[2][0] == board[1][1] && board[1][1] == board[0][2]){
+		if(board[2][0] != Blank){
+		  won = true;
+			return board[2][0];
+		}
+	}
+	
+	// If get here, no winner yet, check if have blank spots 
+  for(int row=0; row<BOARDSIZE; row++){
+    for(int col=0; col<BOARDSIZE; col++){
+      if (board[row][col] == Blank){
+        return Invalid;
+      }
+    }
+  }
+  
+  // Now if get here then all filled and no winner
+  return Blank;
 }

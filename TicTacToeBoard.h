@@ -1,6 +1,9 @@
 #ifndef _TICTACTOEBOARD_H_
 #define _TICTACTOEBOARD_H_
 
+#include <string>
+#include <iostream>
+
 const static int BOARDSIZE = 3;
 
 enum Piece

@@ -112,3 +112,200 @@ TEST(TicTacToeBoardTest, validGetPieceColumn){
     ASSERT_EQ(X, board.getPiece(0, 2));
 }
 
+TEST(TicTacToeBoardTest, gameStillGoing){
+	TicTacToeBoard board;
+	board.placePiece(0, 0);
+	board.placePiece(1, 0);
+	board.placePiece(0, 2);
+	ASSERT_EQ(Invalid, board.getWinner());
+}
+
+TEST(TicTacToeBoardTest, nobodyWon){
+	TicTacToeBoard board;
+	
+	// X, O
+	board.placePiece(0,0);
+	board.placePiece(0,1);
+    // X, O
+	board.placePiece(0,2);
+	board.placePiece(1,1);
+    // X, O
+	board.placePiece(1,0);
+	board.placePiece(2,0);
+    // X, O
+	board.placePiece(1,2);
+	board.placePiece(2,2);
+    // X
+    board.placePiece(2,1);
+	
+	ASSERT_EQ(Blank, board.getWinner());
+}
+
+TEST(TicTacToeBoardTest, xWonBoardNotFilled){
+    TicTacToeBoard board;
+
+	board.placePiece(0,0);
+	board.placePiece(1,0);
+	
+	board.placePiece(1,1);
+	board.placePiece(2,1);
+	
+	board.placePiece(2,2);
+	
+	// X b b
+	// O X b
+	// b O X
+    
+    ASSERT_EQ(X, board.getWinner());
+}
+
+TEST(TicTacToeBoardTest, xWonBoardNotFilledLeftTopDiag){
+    TicTacToeBoard board;
+
+	board.placePiece(0,0);
+	board.placePiece(1,0);
+	
+	board.placePiece(1,1);
+	board.placePiece(2,1);
+	
+	board.placePiece(2,2);
+	
+	// X b b
+	// O X b
+	// b O X
+    
+    ASSERT_EQ(X, board.getWinner());
+}
+
+TEST(TicTacToeBoardTest, xWonBoardNotFilledRightTopDiag){
+    TicTacToeBoard board;
+
+	board.placePiece(0,2);
+	board.placePiece(1,0);
+	
+	board.placePiece(1,1);
+	board.placePiece(2,1);
+	
+	board.placePiece(2,0);
+	
+	// b b X
+	// O X b
+	// X O b
+    
+    ASSERT_EQ(X, board.getWinner());
+}
+
+TEST(TicTacToeBoardTest, xWonBoardFilled){
+    TicTacToeBoard board;
+	board.placePiece(0,0);
+	board.placePiece(1,0);
+	
+	board.placePiece(1,1);
+	board.placePiece(2,1);
+	
+	board.placePiece(0,2);
+	board.placePiece(2,2);
+	
+	board.placePiece(1,2);
+	board.placePiece(0,1);
+	
+	board.placePiece(2,0);
+
+	// X O X
+	// O X X
+	// X O O	
+
+    ASSERT_EQ(X, board.getWinner());
+}
+
+TEST(TicTacToeBoardTest, xWonBoardFilledDiagonalRightTop){
+    TicTacToeBoard board;
+	board.placePiece(0,0);
+	board.placePiece(1,0);
+	
+	board.placePiece(1,1);
+	board.placePiece(2,1);
+	
+	board.placePiece(0,2);
+	board.placePiece(2,2);
+	
+	board.placePiece(1,2);
+	board.placePiece(0,1);
+	
+	board.placePiece(2,0);
+
+	// X O X
+	// O X X
+	// X O O	
+
+    ASSERT_EQ(X, board.getWinner());
+}
+
+TEST(TicTacToeBoardTest, xWonBoardFilledDiagonalLeftTop){
+    TicTacToeBoard board;
+	board.placePiece(0,0);
+	board.placePiece(0,1);
+	
+	board.placePiece(1,1);
+	board.placePiece(0,2);
+	
+	board.placePiece(1,2);
+	board.placePiece(1,0);
+	
+	board.placePiece(2,0);
+	board.placePiece(2,1);
+	
+	board.placePiece(2,2);
+
+	// X O O
+	// O X X
+	// X O X	
+
+    ASSERT_EQ(X, board.getWinner());
+}
+
+TEST(TicTacToeBoardTest, xWonBoardFilledRows){
+    TicTacToeBoard board;
+	board.placePiece(0,0);
+	board.placePiece(1,0);
+	
+	board.placePiece(2,0);
+	board.placePiece(1,1);
+	
+	board.placePiece(0,1);
+	board.placePiece(2,1);
+	
+	board.placePiece(1,2);
+	board.placePiece(2,2);
+	
+	board.placePiece(0,2);
+
+	// X X X
+	// O O X
+	// X O O	
+
+    ASSERT_EQ(X, board.getWinner());
+}
+
+TEST(TicTacToeBoardTest, xWonBoardFilledCols){
+    TicTacToeBoard board;
+	board.placePiece(0,0);
+	board.placePiece(0,2);
+	
+	board.placePiece(2,0);
+	board.placePiece(1,1);
+	
+	board.placePiece(0,1);
+	board.placePiece(2,1);
+	
+	board.placePiece(1,2);
+	board.placePiece(2,2);
+	
+	board.placePiece(1,0);
+
+	// X X O
+	// X O X
+	// X O O	
+
+    ASSERT_EQ(X, board.getWinner());
+}
