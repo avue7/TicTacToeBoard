@@ -23,12 +23,9 @@ Piece TicTacToeBoard::toggleTurn()
     turn = O;
     return turn;
   }
-  else if (turn == O){
+  else{
     turn = X;
     return turn;
-  }
-  else{  // default
-    return X;
   }
 }
 
@@ -80,7 +77,7 @@ Piece TicTacToeBoard::getPiece(int row, int column)
   }
   // Coordinates does not contain X or O
   //else if (board[row][column] != X && board[row][column] != O){
-  else if (board[row][column] == Blank){
+  if (board[row][column] == Blank){
     return Blank;
   }
   // Found something there

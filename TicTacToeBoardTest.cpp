@@ -72,6 +72,12 @@ TEST(TicTacToeBoardTest, validPlacementColumn){
     ASSERT_EQ(X, board.placePiece(0, 2));
 }
 
+TEST(TicTacToeBoardTest, invalidPlacementNotBlank){
+	TicTacToeBoard board;
+	ASSERT_EQ(X, board.placePiece(0, 0));
+    ASSERT_EQ(X, board.placePiece(0, 0));
+}
+
 TEST(TicTacToeBoardTest, invalidGetPieceRowHigher){
 	TicTacToeBoard board;
 	ASSERT_EQ(Invalid, board.getPiece(3, 0));
