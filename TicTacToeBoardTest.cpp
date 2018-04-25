@@ -315,3 +315,27 @@ TEST(TicTacToeBoardTest, xWonBoardFilledCols){
 
     ASSERT_EQ(X, board.getWinner());
 }
+
+TEST(TicTacToeBoardTest, xWonBoardFilledColsPlaceAnotherPiece){
+    TicTacToeBoard board;
+	board.placePiece(0,0);
+	board.placePiece(0,2);
+	
+	board.placePiece(2,0);
+	board.placePiece(1,1);
+	
+	board.placePiece(0,1);
+	board.placePiece(2,1);
+	
+	board.placePiece(1,2);
+	board.placePiece(2,2);
+	
+	board.placePiece(1,0);
+
+	// X X O
+	// X O X
+	// X O O	
+
+    ASSERT_EQ(X, board.getWinner());
+    board.placePiece(1,0);
+}

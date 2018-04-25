@@ -63,6 +63,9 @@ Piece TicTacToeBoard::placePiece(int row, int column)
       return curTurn;
     }
   }
+  else{
+    // Do nothing.
+  }
 }
 
 /**
