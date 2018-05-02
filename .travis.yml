@@ -1,6 +1,6 @@
 {
-  "sudo": "enabled",
   "language": "cpp",
+  "sudo": "enabled",
   "before_install": [
     "pip install --user cpp-coveralls",
     "mkdir gtest",
