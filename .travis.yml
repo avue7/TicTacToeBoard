@@ -16,7 +16,7 @@
     "make clean",
     "make",
     "./TicTacToeBoardTest",
-    "./configure --enable-gcov && make && make check",
+    "./configure --enable-gcov && make && make check"
   ],
   "group": "stable",
   "dist": "trusty",
