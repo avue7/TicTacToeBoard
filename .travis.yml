@@ -1,13 +1,5 @@
 {
-  "os": "linux",
-  "dist": "trusty",
   "sudo": "enabled",
-  "group": "stable",
-  "script": [
-    "make clean",
-    "make",
-    "./TicTacToeBoardTest"
-  ],
   "language": "cpp",
   "before_install": [
     "mkdir gtest",
@@ -18,6 +10,14 @@
     "cd make",
     "make",
     "cd ../../../.."
-  ]
+  ],
+  "script": [
+    "make clean",
+    "make",
+    "./TicTacToeBoardTest"
+  ],
+  "group": "stable",
+  "dist": "trusty",
+  "os": "linux"
 }
 
