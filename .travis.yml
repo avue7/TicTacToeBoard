@@ -15,7 +15,6 @@
   ],
   "script": [
     "make clean",
-    "./configure --enable-gcov",
     "make",
     "./TicTacToeBoardTest"
   ],
