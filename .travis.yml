@@ -4,7 +4,7 @@
   "language": "cpp",
   "before_install": [
     "pip install --user cpp-coveralls",
-    "apt-get install lcov",
+    "sudo apt-get install lcov",
     "mkdir gtest",
     "cd gtest",
     "git clone https://github.com/google/googletest.git",
