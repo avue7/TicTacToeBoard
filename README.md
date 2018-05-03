@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/avue7/TicTacToeBoard.svg?branch=master)](https://travis-ci.com/avue7/TicTacToeBoard)
+[![Build Status](https://travis-ci.com/avue7/TicTacToeBoard.svg?branch=master)](https://travis-ci.org/avue7/TicTacToeBoard)
 [![codecov](https://codecov.io/gh/avue7/TicTacToeBoard/branch/master/graph/badge.svg)](https://codecov.io/gh/avue7/TicTacToeBoard)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ec2752df05684573988d3fc31e9229b8)](https://www.codacy.com/app/avue7/TicTacToeBoard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=avue7/TicTacToeBoard&amp;utm_campaign=Badge_Grade)
 # TicTacToeBoard
