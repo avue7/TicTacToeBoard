@@ -2,6 +2,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/avue7/TicTacToeBoard/badge.svg?branch=master)](https://coveralls.io/github/avue7/TicTacToeBoard?branch=master)
 [![codecov](https://codecov.io/gh/avue7/TicTacToeBoard/branch/master/graph/badge.svg)](https://codecov.io/gh/avue7/TicTacToeBoard)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ec2752df05684573988d3fc31e9229b8)](https://www.codacy.com/app/avue7/TicTacToeBoard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=avue7/TicTacToeBoard&amp;utm_campaign=Badge_Grade)
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 # TicTacToeBoard
 
 ## Associated Enumerated Types
