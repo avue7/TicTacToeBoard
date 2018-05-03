@@ -25,7 +25,7 @@
   "after_success": [
     "lcov --directory . --capture --output-file coverage.info",
     "lcov --remove coverage.info '/usr/*' --output-file coverage.info",
-    "secret:A65YdaGlJwLKqmhDucW5+bKGKZfOancQGaM1tu1uvjpyk9E/8SLSOAB2KbBXWUYuMYc1meFzER8rG8Y7TLfORQndBx3SIQbHkNtM1mH4rnYQ3Hp/B3SmMPUuXbmbima+4MjpCSPlBGtxojGWJm5FtgrA51XJ4VspNNsNd6BQlt4="
+    "bash <(curl -s https://codecov.io/bash) -t c3891982-dd51-4a76-9aef-b5310f85e95e"
   ]
 }
 
