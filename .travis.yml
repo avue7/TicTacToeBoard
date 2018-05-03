@@ -22,7 +22,7 @@
   "dist": "trusty",
   "os": "linux",
   "after_success": [
-    "coveralls --exclude lib --exclude /home/travis/build/ --exclude /user/include/c++/ --gcov-options '\\-b'"
+    "coveralls -e lib -e /home/travis/build/ --e /user/include/c++/ --gcov-options '\\-b'"
   ]
 }
 
