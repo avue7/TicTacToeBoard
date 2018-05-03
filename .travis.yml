@@ -22,7 +22,7 @@
   "dist": "trusty",
   "os": "linux",
   "after_success": [
-    "coveralls --exclude tests --gcov-options '\\-bp'"
+    "coveralls --exclude tests --gcov-options '\\-b'"
   ]
 }
 
