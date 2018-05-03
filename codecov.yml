@@ -16,7 +16,7 @@ parsers:
       macro: no
       
 ignore:
-  - "/home/travis/.*"
   - "/usr/.*"
+  - "/home/travis/.*"
   - "TicTacToeBoardTest.cpp"
 
