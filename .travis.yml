@@ -18,7 +18,6 @@ before_install:
 
 script:
   - make clean
-  - cmake -DENABLE_COVERAGE=ON 
   - make
   - ./TicTacToeBoardTest
 
