@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.com/avue7/TicTacToeBoard.svg?branch=master)](https://travis-ci.com/avue7/TicTacToeBoard)
-[![Coverage Status](https://coveralls.io/repos/github/avue7/TicTacToeBoard/badge.svg?branch=master)](https://coveralls.io/github/avue7/TicTacToeBoard?branch=master)
+[![codecov](https://codecov.io/gh/avue7/TicTacToeBoard/branch/master/graph/badge.svg)](https://codecov.io/gh/avue7/TicTacToeBoard)
 # TicTacToeBoard
 
 ## Associated Enumerated Types
