@@ -15,7 +15,7 @@
   ],
   "script": [
     "make clean",
-    "make -DCOVERALLS=ON,
+    "make -DCOVERALLS=ON",
     "./TicTacToeBoardTest"
   ],
   "group": "stable",
