@@ -1,0 +1,22 @@
+codecov:
+  notify:
+    require_ci_to_pass: yes
+    
+coverage:
+  precision: 2
+  round: nearest
+  range: "90...100"
+  
+parsers:
+  gcov:
+    branch_detection:
+      conditional: yes
+      loop: yes
+      method: yes
+      macro: no
+      
+ignore:
+  - "/home/travis/.*"
+  - "/usr/.*"
+  - "TicTacToeBoardTest.cpp"
+
