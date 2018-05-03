@@ -32,7 +32,7 @@ after_success:
   - lcov --remove coverage.info '/usr/*' --output-file coverage.info
   - bash <(curl -s https://codecov.io/bash) -t c3891982-dd51-4a76-9aef-b5310f85e95e
   - coveralls --exclude lib --exclude tests --gcov-options '\-balp\' \
-      -e usr \
-      -e home \
+      -e usr/ \
+      -e home/ \
       -e TicTacToeBoardTest.cpp
      
